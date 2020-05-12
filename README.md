@@ -1,1 +1,1 @@
-# CVC-20-safegaurd
+# CVC-20-safeguard
