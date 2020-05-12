@@ -10,9 +10,10 @@ from face_detection_widget import MainFaceDetectioWidget
 
 ################################### Mask Detector ################################
 class MaskDetectorWidget(QWidget):
-    def _init_(self, parent = None):
-        super()._init_(parent)
+    def __init__(self, parent = None):
+        super().__init__(parent)
         self.start_button = QPushButton('Start')
+        self.runProcess = QProcess()
 
         layout = QVBoxLayout()
         layout.addStretch()
@@ -22,12 +23,11 @@ class MaskDetectorWidget(QWidget):
         button_hbox.addStretch()
         layout.addLayout(button_hbox)
         self.setLayout(layout)
-        self.start_button.clicked.connect(on_start_button_clicked)
+        self.start_button.clicked.connect(self.on_start_button_clicked)
 
     def on_start_button_clicked(self):
-        runProcess = QProcess()
-        exe = QString("../mask_face_detector/detect_mask_video.py")
-        runProcess.start(exe);
+
+        self.runProcess.start("python detect_mask_video.py")
 
 ################################### ABOUT PAGE ###################################
 class AboutWidget(QWidget):
