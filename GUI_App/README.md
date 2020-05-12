@@ -13,4 +13,4 @@ Run the following commands in git bash in project`s directory.
 >`pip install -r requirements.txt`
 
 #### 5 - Run project:
-> `python safegaurd_main.py`
+> `python safeguard_main.py`
