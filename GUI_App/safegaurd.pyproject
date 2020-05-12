@@ -1,0 +1,3 @@
+{
+    "files": ["record_video.py","face_detection_widget.py","haarcascade_frontalface_default.xml","style_file.qss","hand.xml","safegaurd_main.py","protect_image.png"]
+}
